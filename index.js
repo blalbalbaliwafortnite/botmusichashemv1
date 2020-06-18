@@ -48,8 +48,9 @@ client.registry
 
 client.once('ready', () => {
   console.log('Ready!');
-});
+  client.user.setActivity('-1play')
 
+});
 client.on('voiceStateUpdate', async (___, newState) => {
   if (
     newState.member.user.bot &&
